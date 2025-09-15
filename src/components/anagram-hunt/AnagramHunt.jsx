@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 import WordLegthInput from "./WordLengthInput";
-import Instructions from "./Intructions";
+import AnagramInstructions from "./AnagramIntructions";
 import PlayButton from "./PlayButton";
 const AnagramHunt = () =>{
     const[wordLength,setWordLegth]=useState(5);
@@ -12,7 +12,7 @@ const AnagramHunt = () =>{
             <WordLegthInput
             wordLength={wordLength}
             setWordLegth={setWordLegth}/>
-            <Instructions/>
+            <AnagramInstructions/>
               <PlayButton to={`/games/anagram-hunt/play?length=${wordLength}`} />
         </div>
     )

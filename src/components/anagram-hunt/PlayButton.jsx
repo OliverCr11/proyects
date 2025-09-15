@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 function PlayButton(to) {
     return(
         <div className="d-grid gap2">
-            <link className="btn btn-primary btn-lg" to={to}>
-            Play!</link>
+            <Link className="btn btn-success" to={to}>
+            Play!</Link>
         </div>
     )   
 }
