@@ -1,15 +1,18 @@
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
 import './App.css';
-
-import Header from './components/Header';
-import Footer from './components/Footer';
+import GameSelection from '../components/GameSelection';
+import MathFacts from '../components/MathFacts';
+import AnagramHunt from '../components/anagramHunt';
 function App() {
 
   return (
-    <div className='App'>
-    <Header/>
-    <Footer/>
-    </div>
+    <Routes>
+      <Route path='/games' element={<GameSelection/>}/>
+       <Route path='/math-facts' element={<MathFacts/>}/>
+      <Route path='/anagram-hunt' element={<AnagramHunt/>}/>
+    </Routes>
+    
   )
 }
 
