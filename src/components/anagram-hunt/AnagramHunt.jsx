@@ -13,7 +13,7 @@ const AnagramHunt = () =>{
             wordLength={wordLength}
             setWordLegth={setWordLegth}/>
             <AnagramInstructions/>
-              <PlayButton to={`/games/anagram-hunt/play?length=${wordLength}`} />
+             <PlayButton to={`/anagram-hunt/play/${wordLength}`} />
         </div>
     )
 }
