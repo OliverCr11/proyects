@@ -1,6 +1,6 @@
 import React from "react";
-import 
-const InputText =()=>{
+
+const InputText =({ userInput, setUserInput })=>{
     return(
         <div className="my-4">
             <label htmlFor="anagramInput" className="form-label">
