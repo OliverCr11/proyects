@@ -24,7 +24,7 @@ const [operation, setOperation] = useState('+');
       />
       <Route path='/anagram-hunt' element={<AnagramHunt/>}/>
 
-             <Route path='/anagram-hunt/play/:length' element={<h1>¡Página del juego Anagram Hunt!</h1>} />
+            <Route path='/anagram-hunt/play/:length' element={<Game />} />
     </Routes>
     
   )

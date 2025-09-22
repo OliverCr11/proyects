@@ -11,7 +11,7 @@ const AnagramHunt = () =>{
             <h1 className="my-4">Anagram Hunt</h1>
             <WordLegthInput
             wordLength={wordLength}
-            setWordLegth={setWordLength}/>
+            setWordLength={setWordLength}/>
             <AnagramInstructions/>
              <PlayButton to={`/anagram-hunt/play/${wordLength}`} />
         </div>

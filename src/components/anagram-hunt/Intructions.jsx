@@ -1,5 +1,5 @@
 import React from "react";
-function AnagramInstructions() {
+function Instructions() {
     return(
         <div>
             <ol>
@@ -10,4 +10,4 @@ function AnagramInstructions() {
         </div>
     )
 }
-export default AnagramInstructions;
+export default Instructions;
