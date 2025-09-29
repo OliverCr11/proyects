@@ -1,8 +1,7 @@
-const ClearButton = ( ) => {
+const ClearButton = (props) => {
     return(
-        <div>
-
-        </div>
+        <button className="btn btn-primary" style={{width:"4.2em"}}
+        onClick={ () => {props.handleClick('');}}>Clear</button>
     )
 } 
 export default ClearButton;

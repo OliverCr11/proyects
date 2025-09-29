@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MathInstructions from "./MathInstructions";
 import GoButton from "./GoButton";
-import SettingSelector from "./SettingSelector";
+import SelectInput from "./SelectInput";
 const MathFacts=({ operation, setOperation, maxNumber, setMaxNumber })=>{
     const operations = [
   ['Addition', '+'],
@@ -19,14 +19,14 @@ const MathFacts=({ operation, setOperation, maxNumber, setMaxNumber })=>{
             <h1 className="my-4">Math Facts Practice</h1>
 
      <div className="row mx-1 my-3">
-        <SettingSelector label="Operation"
+        <SelectInput label="Operation"
           id="operation"
           currentValue={operation} 
           setCurrentValue={setOperation}
           values={operations} />
       </div>
       <div className="row mx-1 my-3">
-        <SettingSelector label="Maximum Number"
+        <SelectInput label="Maximum Number"
           id="max-number"
           currentValue={maxNumber}
           setCurrentValue={setMaxNumber}

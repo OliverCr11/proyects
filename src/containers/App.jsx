@@ -9,6 +9,8 @@ import Game2 from '../components/math-facts/Game2';
 function App() {
 const [operation, setOperation] = useState('+');
   const [maxNumber, setMaxNumber] = useState(10);
+
+  console.log("El estado actual en App.jsx es:", operation);
   return (
     <Routes>
       <Route path='/' element={<GameSelection/>}/>
@@ -27,7 +29,9 @@ const [operation, setOperation] = useState('+');
 
      <Route path='/anagram-hunt/play/:length' element={<Game />} />
 
-      <Route path='/math-facts/play' element={<Game2/>}/>
+      <Route path='/math-facts/play' element={<Game2 
+      operation={operation}
+      maxNumber={maxNumber}/>}/>
     </Routes>
     
   )

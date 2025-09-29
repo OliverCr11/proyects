@@ -1,8 +1,17 @@
-const SelectInput = () =>{
+import React from "react";
+import { Fragment } from "react";
+const SelectInput = ({label,id,values,currentValue,setCurrentValue}) =>{
+     const selectOptions = values.map((value)=>
+    <option value={value[1]} key={value[0].toString()}>{value[0]}</option>
+  );
+  
     return(
-        <div>
-
-        </div>
+       <Fragment>
+        <label htmlFor={id} className="col fw-bold">{label}</label>
+        <select id={id} 
+        value={currentValue}
+        onChange={(e)=>setCurrentValue(e.target.value)} className="col form-select">{selectOptions}</select>
+       </Fragment>
     )
-}
+} 
 export default SelectInput;
