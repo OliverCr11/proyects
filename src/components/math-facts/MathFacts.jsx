@@ -32,7 +32,7 @@ const MathFacts=({ operation, setOperation, maxNumber, setMaxNumber })=>{
           setCurrentValue={setMaxNumber}
           values={numbers} />
       </div>   
-            <GoButton/>
+            <GoButton to={'/math-facts/play'}/>
 
             <MathInstructions/>
         </div>

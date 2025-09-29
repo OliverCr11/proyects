@@ -7,7 +7,7 @@ import Score from "./Score";
 import Timer from "./Timer";
 import AnagramData from "./AnagramData";
 
-const Game = () => {
+const Game2 = () => {
     const { length } = useParams();
 
     const [word, setWord] = useState('');
@@ -37,9 +37,10 @@ const Game = () => {
     return (
        <div>
         <h1>Anagram Hunt</h1>
-        <h3>Find the {solutions.length} anagrams for the word: {word}</h3>
         <Score />
         <Timer />
+        <h3>Find the {solutions.length} anagrams for the word: {word}</h3>
+      
         <InputText
             userInput={userInput}
             setUserInput={setUserInput}
@@ -48,4 +49,4 @@ const Game = () => {
     );
 };
 
-export default Game;
+export default Game2;

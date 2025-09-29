@@ -1,4 +1,4 @@
-const AnagramData = {
+const anagrams= {
   5 : [
     [
       "abets",
@@ -150,4 +150,4 @@ const AnagramData = {
     ]
   ]
 }
-export default AnagramData;
+export default anagrams;

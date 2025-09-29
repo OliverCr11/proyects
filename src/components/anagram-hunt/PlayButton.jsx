@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function PlayButton(to) {
+function PlayButton({to}) {
     return(
-        <div className="d-grid gap2">
+        <div className="d-grid gap-2">
             <Link className="btn btn-success" to={to}>
             Play!</Link>
         </div>
