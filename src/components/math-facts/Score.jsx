@@ -1,8 +1,8 @@
-const Score =() =>{
+const Score =(props) =>{
     return(
-        <div>
-            <p>fewfwefwe</p>
-        </div>
+       <>
+       <strong>Score: {props.score}</strong>
+       </>
     )
 }
 export default Score;
