@@ -4,6 +4,7 @@ import { useState } from "react";
 import WordLengthInput from "./WordLengthInput";
 import Instructions from "./Instructions";
 import PlayButton from "./PlayButton";
+import Button from "../shared/Button";
 const AnagramHunt = () =>{
     const[wordLength,setWordLength]=useState(5);
     return(
@@ -13,7 +14,7 @@ const AnagramHunt = () =>{
             wordLength={wordLength}
             setWordLength={setWordLength}/>
             <Instructions/>
-            <PlayButton to={`/anagram-hunt/play/${wordLength}`} />
+            <Button to={`/anagram-hunt/play/${wordLength}`} />
         </div>
     )
 }

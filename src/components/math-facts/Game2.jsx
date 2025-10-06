@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 
-import Score from "./Score";
-import Timer from "./Timer";
+import Score from "../shared/Score";
+import Timer from "../shared/Timer";
 import ClearButton from "./ClearButton";
 import NumberButton from "./NumberButton";
 import Keyboard from "./Keyboard";

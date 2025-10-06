@@ -1,18 +1,15 @@
 import React from "react";
 
-const InputText =({ userInput, setUserInput })=>{
-    return(
-        <div className="my-4">
-            <label htmlFor="anagramInput" className="form-label">
-            Your Anagrams (one per line):
-            </label>
-            <textarea
-            id="anagramInput" className="form-control" rows={5}
+const InputText = ({ userInput, setUserInput }) => {
+    return (
+        <input
+            type="text"
             value={userInput}
-            onChange={(e)=>setUserInput(e.target.value)}
-            />
-        </div>
+            onChange={(e) => setUserInput(e.target.value)}
+            placeholder="type here"
+            autoFocus 
+        />
+    );
+};
 
-    )
-}
 export default InputText;

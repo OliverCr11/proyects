@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MathInstructions from "./MathInstructions";
-import GoButton from "./GoButton";
+import Button from "../shared/Button";
 import SelectInput from "./SelectInput";
 const MathFacts=({ operation, setOperation, maxNumber, setMaxNumber })=>{
     const operations = [
@@ -32,7 +32,7 @@ const MathFacts=({ operation, setOperation, maxNumber, setMaxNumber })=>{
           setCurrentValue={setMaxNumber}
           values={numbers} />
       </div>   
-            <GoButton to={'/math-facts/play'}/>
+            <Button to={'/math-facts/play'}/>
 
             <MathInstructions/>
         </div>
