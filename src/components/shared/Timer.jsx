@@ -11,9 +11,9 @@ const Timer = ({timeLeft,setTimeLeft}) =>{
         }
     },[]);
     return(
-        <div>
+        <span>
         <strong>Time:{timeLeft}</strong>
-        </div>
+        </span>
     )
 }
 export default Timer;

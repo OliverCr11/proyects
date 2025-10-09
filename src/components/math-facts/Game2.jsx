@@ -7,10 +7,9 @@ import ClearButton from "./ClearButton";
 import NumberButton from "./NumberButton";
 import Keyboard from "./Keyboard";
 import Equation from "./Equation";
+
 import './Game2.css';
 import { randInt } from "./helpers/helpers";
-
-const Game2 = ({ operation, maxNumber }) => {
 
   function getRandNumbers(operator, low, high) {
     let num1 = randInt(low, high);
@@ -31,6 +30,7 @@ const Game2 = ({ operation, maxNumber }) => {
     }
     return { num1, num2 };
   }
+const Game2 = ({ operation, maxNumber }) => {
 
   const [operands, setOperands] = useState(() => getRandNumbers(operation, 0, maxNumber));
   const question = operands.num1 + ' ' + operation + ' ' + operands.num2;
@@ -39,6 +39,19 @@ const Game2 = ({ operation, maxNumber }) => {
   const [timerLeft, setTimeLeft] = useState(gameLength);
   const [userAnswer, setUserAnswer] = useState('');
   const [score, setScore] = useState(0);
+  
+    const newQuestion = () => {
+    setUserAnswer('');
+    setAnswered(false);
+    setOperands(getRandNumbers(operation, 0, maxNumber));
+  }
+
+  const restart = () => {
+    setTimeLeft(gameLength);
+    setScore(0);
+    newQuestion();
+  }
+
 
   const operationNames = {
     '+': 'Addition',
@@ -76,17 +89,6 @@ const Game2 = ({ operation, maxNumber }) => {
 
   }, [userAnswer, answered, score, operation, operands]); 
 
-  const newQuestion = () => {
-    setUserAnswer('');
-    setAnswered(false);
-    setOperands(getRandNumbers(operation, 0, maxNumber));
-  }
-
-  const restart = () => {
-    setTimeLeft(gameLength);
-    setScore(0);
-    newQuestion();
-  }
 
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
   const numberButtons = numbers.map((number) =>
