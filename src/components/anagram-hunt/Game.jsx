@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import InputText from "./InputText";
 import Timer from "../shared/Timer";
@@ -16,10 +17,21 @@ const Game2 = () => {
     const [timeLeft, setTimeLeft] = useState(gameLength);
     const [foundSolutions, setFoundSolutions] = useState([]);
     const [score, setScore] = useState(0);
+    const navigate =useNavigate();
     
     const [playedIndices, setPlayedIndices] = useState([]);
     const [gameWon, setGameWon] = useState(false);
 
+    useEffect(() => {
+        const numericLength = parseInt(length, 10);
+        if (isNaN(numericLength) || numericLength < 5 || numericLength > 8) {
+            console.error(`Invalid length: ${length}. Redirecting to the start .`);
+
+            navigate('/'); 
+        } else {
+            startNewRound();
+        }
+    }, [length, navigate]); 
 
     const startNewRound = () => {
         const wordGroups = AnagramData[length];
@@ -49,10 +61,6 @@ const Game2 = () => {
         setSolutions(correctSolutions);
         setFoundSolutions([]); 
     };
-
-    useEffect(() => {
-        startNewRound();
-    }, [length]);
 
     useEffect(() => {
         const currentInputLower = userInput.toLowerCase();
